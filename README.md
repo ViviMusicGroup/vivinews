@@ -28,7 +28,6 @@ The announcement in `News/1.md` is a single file containing YAML frontmatter (fo
 ---
 id: 1
 title: Welcome to the New ViviMusic Update!
-summary: Improved audio playback, video previews, and UI enhancements.
 tag: Update
 date: Nov 23, 2026
 image: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/image/bannerofficial.png

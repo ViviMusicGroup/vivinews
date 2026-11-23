@@ -12,7 +12,6 @@ The entire announcement lives in `News/1.md`:
 ---
 id: 1
 title: New Sound Equalizer & Performance Boost
-summary: Improved audio playback, video previews, and UI enhancements.
 tag: Update
 date: Nov 25, 2026
 timestamp: 2026-11-25T10:00:00Z
