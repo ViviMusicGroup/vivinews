@@ -9,9 +9,7 @@ This repository hosts official news, update announcements, images, and videos di
 ```
 vivinews/
 ├── News/
-│   ├── latest.md             # Active announcement (frontmatter metadata + markdown body)
-│   ├── 1.md                  # Announcement #1 (archive)
-│   └── 2.md                  # Announcement #2 (archive)
+│   └── 1.md                  # Active announcement (frontmatter metadata + markdown body)
 │
 ├── image/
 │   └── bannerofficial.png        # Images for announcements
@@ -22,15 +20,15 @@ vivinews/
 
 ---
 
-## 📝 How to Publish an Announcement
+## 📝 How to Publish or Edit an Announcement
 
-Each announcement in `News/latest.md` is a single unified file containing YAML frontmatter (for the card on the Home screen) and full Markdown content (for the detail bottom sheet):
+The announcement in `News/1.md` is a single file containing YAML frontmatter (for the card on the Home screen) and full Markdown content (for the detail bottom sheet):
 
 ```markdown
 ---
 id: 1
 title: Welcome to the New ViviMusic Update!
-summary: Check out the latest features, improved audio playback, video previews, and UI enhancements.
+summary: Improved audio playback, video previews, and UI enhancements.
 tag: Update
 date: Nov 23, 2026
 image: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/image/bannerofficial.png
@@ -51,7 +49,7 @@ Visit [our GitHub](https://github.com/ViviMusicGroup/vivi-music) for more!
 
 * **Large Card:** If `image:` or `video:` is provided, the card automatically shows the **Large Expressive Card** with the top media banner (Harmonic Stories style).
 * **Small Card:** If `image:` and `video:` are omitted or null, it shows the compact **Small Expressive Card**.
-* **Clicking the Card:** Opens the detailed `ModalBottomSheet` displaying full markdown, media, and action buttons.
+* **Updating announcements:** When publishing a new update, simply update the fields in `News/1.md` and bump `id:` (e.g. `id: 2`).
 
 ---
 
