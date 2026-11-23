@@ -65,5 +65,15 @@ You can configure 1 or 2 dynamic buttons in the bottom sheet using simple flat k
 
 ---
 
+### ⏳ Automatic Expiry (Date & Time)
+You can optionally add `expires:` so the announcement automatically vanishes when the date passes:
+```yaml
+expires: 2026-12-05          # Expires at the end of the day
+# or
+expires: 2026-12-05T18:00:00Z # Expires at exact UTC timestamp
+```
+
+---
+
 ## ⚠️ Important Note on Repository Visibility
 For the ViviMusic Android app to fetch announcements, images, and videos without authentication errors, this repository must be set to **Public** on GitHub.

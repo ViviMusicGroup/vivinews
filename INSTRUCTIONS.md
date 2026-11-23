@@ -83,6 +83,22 @@ actionUrl: https://github.com/ViviMusicGroup/vivi-music/releases/latest
 
 ---
 
+## ⏳ Automatic Expiration (Date & Time)
+
+You can set an announcement to automatically expire and vanish by specifying `expires:`:
+
+```yaml
+# Expires at the end of the specified date (23:59:59)
+expires: 2026-12-05
+
+# Or specify an exact UTC time
+expires: 2026-12-05T18:00:00Z
+```
+
+When the expiration date passes, the app will automatically hide the card from all users and new installs—no manual action required!
+
+---
+
 ## ⏸️ How to Hide Announcements When There Is No News
 
 If you don't want any card showing on the Home screen:
