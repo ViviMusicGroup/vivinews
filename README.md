@@ -32,8 +32,10 @@ tag: Update
 date: Nov 23, 2026
 image: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/image/bannerofficial.png
 video: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/video/sample_update.mp4
-actionLabel: View on GitHub
-actionUrl: https://github.com/ViviMusicGroup/vivi-music
+actionLabel: Join Telegram
+actionUrl: https://t.me/vivimusic
+secondaryActionLabel: View on GitHub
+secondaryActionUrl: https://github.com/ViviMusicGroup/vivi-music
 dismissible: true
 ---
 
@@ -46,9 +48,20 @@ Here is our full announcement with **bold text**, bullet points:
 Visit [our GitHub](https://github.com/ViviMusicGroup/vivi-music) for more!
 ```
 
-* **Large Card:** If `image:` or `video:` is provided, the card automatically shows the **Large Expressive Card** with the top media banner (Harmonic Stories style).
-* **Small Card:** If `image:` and `video:` are omitted or null, it shows the compact **Small Expressive Card**.
-* **Updating announcements:** When publishing a new update, simply update the fields in `News/1.md` and bump `id:` (e.g. `id: 2`).
+### 🔘 Dynamic Action Buttons (Flat Keys)
+You can configure 1 or 2 dynamic buttons in the bottom sheet using simple flat keys:
+* **Single Button**:
+  ```yaml
+  actionLabel: Join Telegram
+  actionUrl: https://t.me/vivimusic
+  ```
+* **Dual Buttons**:
+  ```yaml
+  actionLabel: Join Telegram
+  actionUrl: https://t.me/vivimusic
+  secondaryActionLabel: View on GitHub
+  secondaryActionUrl: https://github.com/ViviMusicGroup/vivi-music
+  ```
 
 ---
 

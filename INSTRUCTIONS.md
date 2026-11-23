@@ -1,6 +1,6 @@
 # 📢 ViviNews Announcement Guide: How to Add & Update Announcements
 
-This guide explains step-by-step how to manage announcements, add images and videos, and choose card styles.
+This guide explains step-by-step how to manage announcements, add images and videos, choose card styles, and customize action buttons.
 
 ---
 
@@ -11,35 +11,48 @@ The entire announcement lives in `News/1.md`:
 ```markdown
 ---
 id: 1
-title: New Sound Equalizer & Performance Boost
+title: Welcome to the New ViviMusic Update!
 tag: Update
 date: Nov 25, 2026
-timestamp: 2026-11-25T10:00:00Z
 image: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/image/bannerofficial.png
 video: null
-actionLabel: View on GitHub
-actionUrl: https://github.com/ViviMusicGroup/vivi-music
+actionLabel: Join Telegram
+actionUrl: https://t.me/vivimusic
+secondaryActionLabel: View on GitHub
+secondaryActionUrl: https://github.com/ViviMusicGroup/vivi-music
 dismissible: true
 ---
 
-# 🎚️ New Equalizer & Audio Improvements
+# 🎚️ New Announcement Details
 
-We are excited to bring advanced audio equalization to ViviMusic!
-
-### What's New in this Build:
-- **10-Band Graphic Equalizer**: Custom presets for Bass Boost, Vocal, and Classical.
-- **Lower Battery Usage**: Optimized playback pipeline saves up to 15% battery.
-- **Bug Fixes**: Resolved intermittent playback stops during background caching.
-
-### Useful Links
-- Join our discussion on [Telegram](https://t.me/vivimusic)
-- Check out the source code on [GitHub](https://github.com/ViviMusicGroup/vivi-music)
-
-Enjoy listening!
+Full rich markdown text is displayed here inside the bottom sheet.
 ```
 
-### Publishing Updates
-Whenever you have a new update, edit `News/1.md`, change the `id` (e.g. `id: 2`), and commit. The app will immediately display the new announcement!
+---
+
+## 🔘 Dynamic Action Buttons
+
+You can show any custom buttons using simplified flat keys in frontmatter:
+
+### Example 1: Telegram Channel Link
+```yaml
+actionLabel: Join Telegram
+actionUrl: https://t.me/vivimusic
+```
+
+### Example 2: Dual Action Buttons (Primary + Secondary)
+```yaml
+actionLabel: Join Telegram
+actionUrl: https://t.me/vivimusic
+secondaryActionLabel: View on GitHub
+secondaryActionUrl: https://github.com/ViviMusicGroup/vivi-music
+```
+
+### Example 3: Download APK / Release Link
+```yaml
+actionLabel: Download Update
+actionUrl: https://github.com/ViviMusicGroup/vivi-music/releases/latest
+```
 
 ---
 
