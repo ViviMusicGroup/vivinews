@@ -1,0 +1,13 @@
+{
+  "id": "vivi_news_2026_01",
+  "title": "Welcome to the New ViviMusic Update!",
+  "summary": "Check out the latest features, improved audio playback, video previews, and UI enhancements.",
+  "content": "### What's New in ViviMusic\n\nWe are excited to introduce our new **Expressive Announcements** channel!\n\n#### Highlights:\n- **Adaptive Home Card**: Beautifully styled cards that adapt whether you have images or not.\n- **Full Video & Media Preview**: Watch update previews directly in the app.\n- **Hyperlink Support**: Quickly tap links to join discussions, report bugs, or view source code.\n\nVisit our [GitHub Repository](https://github.com/ViviMusicGroup/vivi-music) or join the community.\n\nEnjoy streaming with ViviMusic!",
+  "imageUrl": "https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/image/bannerofficial.png",
+  "videoUrl": "https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/video/sample_update.mp4",
+  "tag": "Update",
+  "date": "Nov 23, 2026",
+  "actionLabel": "View on GitHub",
+  "actionUrl": "https://github.com/ViviMusicGroup/vivi-music",
+  "isDismissible": true
+}
