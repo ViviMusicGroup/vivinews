@@ -81,6 +81,20 @@ actionUrl: https://github.com/ViviMusicGroup/vivi-music/releases/latest
    video: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/video/preview_demo.mp4
    ```
 
+### 🎬 How to Play Video Directly on the HomeScreen:
+By default, if an image is provided, the card displays the image banner and plays the video when opened. If you want the video to play **directly inside the HomeScreen card box**, you have two easy options:
+
+1. **Explicit Option (Works even if `image` is also provided)**:
+   ```yaml
+   previewMedia: video
+   ```
+2. **Simple Option**:
+   Provide `video:` and set `image: null`:
+   ```yaml
+   image: null
+   video: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/video/sample_update.mp4
+   ```
+
 ---
 
 ## ⏳ Automatic Expiration (Date & Time)
