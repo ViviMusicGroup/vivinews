@@ -8,15 +8,13 @@ This guide explains step-by-step how to publish new announcements, add images an
 
 Whenever you have a new statement, feature update, or notice to share:
 
-### Step 1: Create your archive files (Optional but recommended)
+### Step 1: Create your archive file (Optional but recommended)
 If your last announcement was #1, create:
-- `News/slim/2.md`
-- `News/detail/2.md`
+- `News/2.md`
 
-### Step 2: Write your announcement
+### Step 2: Write your announcement in `News/latest.md` (and archive `News/2.md`)
 
-#### 📄 A. The Home Card Preview (`News/slim/latest.md` & `News/slim/2.md`)
-This file controls what appears on the ViviMusic Home screen:
+A single file handles both the home card preview (frontmatter) and the detailed story (Markdown body):
 
 ```markdown
 ---
@@ -32,12 +30,7 @@ actionLabel: View on GitHub
 actionUrl: https://github.com/ViviMusicGroup/vivi-music
 dismissible: true
 ---
-```
 
-#### 📄 B. The Full Detail Story (`News/detail/latest.md` & `News/detail/2.md`)
-This file is displayed inside the Modal BottomSheet when the user clicks the card:
-
-```markdown
 # 🎚️ New Equalizer & Audio Improvements
 
 We are excited to bring advanced audio equalization to ViviMusic!
@@ -54,11 +47,7 @@ We are excited to bring advanced audio equalization to ViviMusic!
 Enjoy listening!
 ```
 
-### Step 3: Copy to `latest.md`
-- Copy the content of `News/slim/2.md` into `News/slim/latest.md`.
-- Copy the content of `News/detail/2.md` into `News/detail/latest.md`.
-
-### Step 4: Commit and Push
+### Step 3: Commit and Push
 ```bash
 git add .
 git commit -m "feat(news): publish announcement #2"
@@ -70,12 +59,12 @@ The app will immediately detect `id: 2` on next launch or pull-to-refresh!
 
 ## 🎨 Choosing Card Designs: Large vs Small
 
-| Design Style | When to Use | How to Configure in `slim/latest.md` |
+| Design Style | When to Use | How to Configure in Frontmatter |
 | :--- | :--- | :--- |
 | **Large Expressive Card** | When you have a banner image or update video | Provide `image:` URL or `video:` URL |
 | **Small Compact Card** | When you want a quick text-only notice, maintenance alert, or message | Set `image: null` and `video: null` |
 
-### Small Card Example (`slim/latest.md`):
+### Small Card Example:
 ```markdown
 ---
 id: 3
@@ -90,6 +79,9 @@ actionLabel: Status Page
 actionUrl: https://github.com
 dismissible: true
 ---
+
+# Server Maintenance Details
+Maintenance is scheduled to upgrade backends.
 ```
 
 ---
@@ -98,16 +90,14 @@ dismissible: true
 
 ### Adding an Image:
 1. Place your image in the `image/` folder (e.g. `image/v2_release.png`).
-2. Commit and push it.
-3. In `News/slim/latest.md`, set:
+2. In `News/latest.md`, set:
    ```yaml
    image: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/image/v2_release.png
    ```
 
 ### Adding a Video:
 1. Place your video in the `video/` folder (e.g. `video/preview_demo.mp4`).
-2. Commit and push it.
-3. In `News/slim/latest.md`, set:
+2. In `News/latest.md`, set:
    ```yaml
    video: https://raw.githubusercontent.com/ViviMusicGroup/vivinews/main/video/preview_demo.mp4
    ```
@@ -117,7 +107,7 @@ dismissible: true
 
 ## 🔗 Supported Formatting & Hyperlinks
 
-In `News/detail/latest.md`, you can use full standard Markdown:
+In the Markdown body of `News/latest.md`, you can use standard Markdown:
 - **Headers**: `# Title`, `## Subtitle`, `### Section`
 - **Bold / Italic**: `**bold text**`, `*italic text*`
 - **Bullet Lists**: `- Item 1`, `- Item 2`
@@ -130,7 +120,6 @@ In `News/detail/latest.md`, you can use full standard Markdown:
 ## ⏸️ How to Hide Announcements When There Is No News
 
 If you don't want any card showing on the Home screen:
-In `News/slim/latest.md`, set:
 ```markdown
 ---
 active: false

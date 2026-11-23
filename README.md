@@ -9,15 +9,9 @@ This repository hosts official news, update announcements, images, and videos di
 ```
 vivinews/
 ├── News/
-│   ├── slim/
-│   │   ├── latest.md             # Active card preview fetched for the Home Screen
-│   │   ├── 1.md                  # Announcement #1 (archive)
-│   │   └── 2.md                  # Announcement #2 (archive)
-│   │
-│   └── detail/
-│       ├── latest.md             # Active detail markdown fetched for the ModalBottomSheet
-│       ├── 1.md                  # Full detail #1 (archive)
-│       └── 2.md                  # Full detail #2 (archive)
+│   ├── latest.md             # Active announcement (frontmatter metadata + markdown body)
+│   ├── 1.md                  # Announcement #1 (archive)
+│   └── 2.md                  # Announcement #2 (archive)
 │
 ├── image/
 │   └── bannerofficial.png        # Images for announcements
@@ -30,8 +24,7 @@ vivinews/
 
 ## 📝 How to Publish an Announcement
 
-### 1. The Home Card (`News/slim/latest.md`)
-Contains the metadata, titles, media links, and short summary displayed on the Home screen card:
+Each announcement in `News/latest.md` is a single unified file containing YAML frontmatter (for the card on the Home screen) and full Markdown content (for the detail bottom sheet):
 
 ```markdown
 ---
@@ -46,25 +39,21 @@ actionLabel: View on GitHub
 actionUrl: https://github.com/ViviMusicGroup/vivi-music
 dismissible: true
 ---
-```
 
-* If `image:` or `video:` is provided, the card automatically shows the **Large Expressive Card** with the top media banner.
-* If `image:` and `video:` are omitted or null, it shows the **Small Expressive Card**.
-
-### 2. The Detailed Sheet (`News/detail/latest.md`)
-Contains the full rich Markdown text displayed when the user taps the card to open the ModalBottomSheet:
-
-```markdown
 # Welcome to ViviMusic!
 
 Here is our full announcement with **bold text**, bullet points:
-- Feature 1
-- Feature 2
+- Feature 1: Smooth playback & equalizer
+- Feature 2: Rich announcements
 
 Visit [our GitHub](https://github.com/ViviMusicGroup/vivi-music) for more!
 ```
 
+* **Large Card:** If `image:` or `video:` is provided, the card automatically shows the **Large Expressive Card** with the top media banner (Harmonic Stories style).
+* **Small Card:** If `image:` and `video:` are omitted or null, it shows the compact **Small Expressive Card**.
+* **Clicking the Card:** Opens the detailed `ModalBottomSheet` displaying full markdown, media, and action buttons.
+
 ---
 
 ## ⚠️ Important Note on Repository Visibility
-For the ViviMusic Android app to fetch announcements, images, and videos without authentication errors, this repository should be set to **Public** on GitHub.
+For the ViviMusic Android app to fetch announcements, images, and videos without authentication errors, this repository must be set to **Public** on GitHub.
