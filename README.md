@@ -9,13 +9,20 @@ This repository hosts official news, update announcements, images, and videos di
 ```
 vivinews/
 ├── News/
-│   ├── latest.md             # The active announcement fetched by the ViviMusic app
-│   ├── 1.md                  # Announcement #1 (archive)
-│   └── 2.md                  # Announcement #2 (archive)
+│   ├── slim/
+│   │   ├── latest.md             # Active card preview fetched for the Home Screen
+│   │   ├── 1.md                  # Announcement #1 (archive)
+│   │   └── 2.md                  # Announcement #2 (archive)
+│   │
+│   └── detail/
+│       ├── latest.md             # Active detail markdown fetched for the ModalBottomSheet
+│       ├── 1.md                  # Full detail #1 (archive)
+│       └── 2.md                  # Full detail #2 (archive)
+│
 ├── image/
-│   └── bannerofficial.png    # Images for announcements
+│   └── bannerofficial.png        # Images for announcements
 ├── video/
-│   └── sample_update.mp4     # Videos / clips for announcements
+│   └── sample_update.mp4         # Videos / clips for announcements
 └── README.md
 ```
 
@@ -23,8 +30,8 @@ vivinews/
 
 ## 📝 How to Publish an Announcement
 
-### 1. Large Card (With Image / Video)
-When `image:` or `video:` is provided, ViviMusic displays an expressive large card with a top media banner on the Home screen:
+### 1. The Home Card (`News/slim/latest.md`)
+Contains the metadata, titles, media links, and short summary displayed on the Home screen card:
 
 ```markdown
 ---
@@ -39,35 +46,25 @@ actionLabel: View on GitHub
 actionUrl: https://github.com/ViviMusicGroup/vivi-music
 dismissible: true
 ---
-
-# Details here...
 ```
 
-### 2. Small Card (Text Only)
-Leave `image:` and `video:` empty or omit them. ViviMusic will automatically render a compact, elegant small card without media headers:
+* If `image:` or `video:` is provided, the card automatically shows the **Large Expressive Card** with the top media banner.
+* If `image:` and `video:` are omitted or null, it shows the **Small Expressive Card**.
+
+### 2. The Detailed Sheet (`News/detail/latest.md`)
+Contains the full rich Markdown text displayed when the user taps the card to open the ModalBottomSheet:
 
 ```markdown
----
-id: 2
-title: Scheduled Server Maintenance
-summary: Our backend sync servers will undergo brief maintenance tonight from 02:00 to 03:00 UTC.
-tag: Maintenance
-date: Nov 24, 2026
-actionLabel: null
-actionUrl: null
-dismissible: true
----
+# Welcome to ViviMusic!
 
-# Maintenance Notice
-Backend services may experience temporary interruptions during this window.
+Here is our full announcement with **bold text**, bullet points:
+- Feature 1
+- Feature 2
+
+Visit [our GitHub](https://github.com/ViviMusicGroup/vivi-music) for more!
 ```
-
-### 3. Workflow for New Announcements
-1. Create a copy of your new post as `News/2.md` (for your archive).
-2. Copy the content into `News/latest.md`.
-3. Commit and push. ViviMusic will immediately fetch `News/latest.md` and show it to users.
 
 ---
 
 ## ⚠️ Important Note on Repository Visibility
-For the ViviMusic Android app to fetch `latest.md`, images, and videos without requiring GitHub personal access tokens or user authentication, this repository should be set to **Public** on GitHub.
+For the ViviMusic Android app to fetch announcements, images, and videos without authentication errors, this repository should be set to **Public** on GitHub.
